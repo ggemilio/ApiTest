@@ -6,4 +6,4 @@ dbClinet = DbClient()
 
 @app.get("/")
 async def root():
-    return dbClinet.getDataFromTable("Posts", "*")
+    return {"message": "Hello World"}
