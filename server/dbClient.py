@@ -1,5 +1,10 @@
 import os
 from supabase import create_client, Client
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    pass
 
 class DbClient():
 
