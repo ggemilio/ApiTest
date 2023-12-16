@@ -8,4 +8,4 @@ load_dotenv()
 
 @app.get("/", tags=["Root"])
 async def read_root():
-  return dbClinet.getDataFromTable("Posts")
+  return dbClinet.getDataFromTable("Users")
