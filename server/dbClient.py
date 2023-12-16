@@ -10,4 +10,4 @@ class DbClient():
 
     def getDataFromTable(self, table: str, column: str = "*") -> list:
         response = self.supabase.table(table).select(column).execute()
-        return response.data
+        return {"data": response.data}
