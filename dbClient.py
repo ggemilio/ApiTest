@@ -10,6 +10,6 @@ class DbClient():
         key: str = SUPABASE_KEY
         self.supabase: Client = create_client(url, key)
 
-    def getDataFromTable(self, table: str, column: str = "*") -> dict:
+    def getDataFromTable(self, table: str, column: str = "*") -> list:
         response = self.supabase.table(table).select(column).execute()
         return response.data
