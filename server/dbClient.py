@@ -11,3 +11,7 @@ class DbClient():
     def getDataFromTable(self, table: str, column: str = "*") -> list:
         response = self.supabase.table(table).select(column).execute()
         return {"data": response.data}
+
+    def insertToTable(self, table:str, post_data: dict):
+        res = self.supabase.table(table).insert(post_data).execute()
+        print(res)
